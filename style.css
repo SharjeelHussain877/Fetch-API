@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Rubik&display=swap");
+body {
+  font-family: "Poppins", "Rubik", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin-top: 20px;
+  display: block;
+}
+.t-header {
+  display: flex;
+  justify-content: space-between;
+}
+th {
+  background-color: rgb(211, 211, 211);
+  padding: 10px 15px;
+}
+.button {
+  cursor: pointer;
+  display: flex;
+}
+
+/* Back button  */
+.back-button {
+  position: relative;
+  top: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  display: inline-block;
+  border-radius: 50px;
+  transition: all 0.3s;
+  border: none;
+  color: white;
+  background-color: #3498db;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+.back-button::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.back-button::after {
+  background-color: #2980b9;
+}
+
+.back-button:hover::after {
+  transform: scaleX(1.2) scaleY(1.4);
+  opacity: 0;
+}
+/* Back button end  */
+
+.btn {
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  display: flex;
+  border-radius: 6em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  color: black;
+  background-color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+/* Loader  */
+
+.loader {
+  display: inline-block;
+  font-size: 48px;
+  font-weight: bold;
+  color: #ff3d00;
+  letter-spacing: 2px;
+  position: relative;
+}
+.loader::after {
+  content: "Loading";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: animloader 10s ease-in infinite;
+}
+
+@keyframes animloader {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
